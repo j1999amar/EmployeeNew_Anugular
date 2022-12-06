@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AddEmployeeComponent {
         empcode = ""
         name = ""
-        designation = ""
+        designamtion = ""
         salary = ""
         company =""
         phone = ""
@@ -20,7 +20,7 @@ export class AddEmployeeComponent {
           let data={
             "empcode" :this.empcode,
             "name":this.name,
-            "designation" :this.designation,
+            "designation" :this.designamtion,
             "salary" :this.salary,
             "company" :this.company,
             "username" :this.username,
