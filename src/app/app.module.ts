@@ -6,17 +6,28 @@ import { AppComponent } from './app.component';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { FormsModule } from '@angular/forms';
 import { ViewEmployeeComponent } from './view-employee/view-employee.component';
-
+import { NavbarComponent } from './navbar/navbar.component';
+import { RouterModule, Routes } from '@angular/router';
+const myRouter:Routes=[{
+  path:'',
+  component:ViewEmployeeComponent
+},
+{
+  path:'addEmployee',
+  component:AddEmployeeComponent
+}]
 @NgModule({
   declarations: [
     AppComponent,
     AddEmployeeComponent,
-    ViewEmployeeComponent
+    ViewEmployeeComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(myRouter)
   ],
   providers: [],
   bootstrap: [AppComponent]
