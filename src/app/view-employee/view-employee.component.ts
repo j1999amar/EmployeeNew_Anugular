@@ -7,11 +7,11 @@ import { ApiService } from '../api.service';
   styleUrls: ['./view-employee.component.css'],
 })
 export class ViewEmployeeComponent {
-  data:any = {}
+  data:any = []
 
   constructor( private api:ApiService){
     this.api.fetchData().subscribe(
-      (response:any)=>{
+      (response)=>{
         this.data=response
       }
     )
