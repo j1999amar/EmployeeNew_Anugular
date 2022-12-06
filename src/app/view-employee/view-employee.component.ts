@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-view-employee',
@@ -6,16 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./view-employee.component.css'],
 })
 export class ViewEmployeeComponent {
-  data = [
-    {
-      empcode: 1001,
-      name: 'Amarnath',
-      designamtion: 'Traine',
-      salary: 25000,
-      company: 'Nest Digital',
-      phone: '8098385972',
-      username: 'amarnath',
-      password: 'amar123',
-    },
-  ];
-}
+  data:any = {}
+
+  constructor( private api:ApiService){
+    this.api.fetchData().subscribe(
+      (response:any)=>{
+        this.data=response
+      }
+    )
+  }
+    
+  }
+

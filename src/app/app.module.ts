@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {HttpClientModule}from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
@@ -27,7 +27,8 @@ const myRouter:Routes=[{
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    RouterModule.forRoot(myRouter)
+    RouterModule.forRoot(myRouter),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
