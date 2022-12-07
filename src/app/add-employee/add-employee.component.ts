@@ -36,8 +36,13 @@ export class AddEmployeeComponent {
               console.log(response)
             }
           )
-          this.route.navigate(['/'])
-         }    
-
+          this.empcode = ""
+          this.name = ""
+          this.designamtion = ""
+          this.salary = ""
+          this.company =""
+          this.phone = ""
+          this.username = ""
+          this.password = ""         }    
 
 }
